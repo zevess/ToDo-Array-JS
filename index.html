@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>ToDo</title>
+</head>
+
+<body>
+    <h1 class="titleName">ToDo</h1>
+    <div class="wrapper">
+
+        <div class="prior HIGH">
+            <h3 class="taskDifficult" id="high">HIGH</h3>
+
+            <form onsubmit="return false" class="addTask" id="addHighTask">
+                <input type="text" placeholder="Добавить важных дел" id="addHighTaskInput" class="taskClass">
+                <button class="addButton" id="addHighTaskButton">&plus;</button>
+            </form>
+
+            <div class="tasks" id="highTasks">
+                <!-- <div action="" id="highTaskFormID" class="taskForm">
+                    <input type="checkbox" class="checkboxClass" id="highCheckboxID">
+                    <div class="labelText" id="highLabelTextID">Вот вам и супер интересная тема.
+                        Вы наверняка заметили что ваши файлы с кодом становятся все объемнее, что хочется вынести
+                        некоторые
+                        вещи куда-то за пределы основной программы.</div>
+                    <button id="deleteHighTask" class="deleteButton">&#10006;</button>
+                </div> -->
+            </div>
+        </div>
+
+
+        <div class="prior LOW">
+            <h3 class="taskDifficult" id="low">LOW</h3>
+
+            <form onsubmit="return false" class="addTask" id="addLowTask">
+                <input type="text" placeholder="Добавить" id="addLowTaskInput" class="taskClass">
+                <button class="addButton" id="addLowTaskButton">&plus;</button>
+            </form>
+
+            <div class="tasks" id="lowTasks">
+                <!-- <div action="" id="lowTaskFormID" class="taskForm" >
+                    <input type="checkbox" class="checkboxClass" id="lowCheckboxID">
+                    <div for="" class="labelText" id="lowLabelTextID">Посмотреть ютубчик.</div>
+                    <button id="deleteLowTask" class="deleteButton">&#10006;</button>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    
+    <script type="module" src="main.js"></script>
+</body>
+
+</html>
