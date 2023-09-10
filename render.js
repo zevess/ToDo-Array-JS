@@ -1,6 +1,6 @@
 import { taskList } from "./main.js";
 import { HIGH_ELEMENTS, LOW_ELEMENTS } from "./elements.js";
-import { addHighTask, addLowTask } from "./addTask.js";
+import { Task } from "./addTask.js";
 import { deleteButtons } from "./removeTask.js";
 import { changeStatus } from "./changeStatus.js";
 
@@ -32,11 +32,13 @@ export function render() {
         let taskName;
         if (taskList[i].priority === "high") {
             taskName = taskList[i].name;
-            addHighTask(taskName);
+            const task = new Task(taskName);
+            task.addHighTask(taskName);
         }
         if (taskList[i].priority === "low") {
             taskName = taskList[i].name;
-            addLowTask(taskName);
+            const task = new Task(taskName);
+            task.addLowTask(taskName);
         }
         if (taskList[i].status === ''){
             taskList[i].status = 'in progress';

@@ -1,59 +1,47 @@
 import { HIGH_ELEMENTS, LOW_ELEMENTS } from "./elements.js";
 
-export function addHighTask(tsknm, ) {
-    const highFormTask = document.createElement('div');
-    highFormTask.id = 'highTaskFormID';
-    highFormTask.className = 'taskForm';
+export function Task(tsknm) {
+    this.addHighTask = function (tsknm) {
+        const FormTask = document.createElement('div');
+        const CheckTask = document.createElement('input');
+        const LabelTask = document.createElement('div');
+        const DeleteTask = document.createElement('button');
+        FormTask.id = 'highTaskFormID';
+        FormTask.className = 'taskForm'
+        CheckTask.id = 'highCheckboxID';
+        CheckTask.className = 'checkboxClass';
+        CheckTask.type = 'checkbox';
+        LabelTask.id = 'highLabelTextID';
+        LabelTask.className = 'labelText';
+        LabelTask.textContent = tsknm;
+        DeleteTask.id = 'deleteHighTask';
+        DeleteTask.className = 'deleteButton';
+        DeleteTask.textContent = '✖';
+        HIGH_ELEMENTS.HIGH_TASKS.insertAdjacentElement('beforeend', FormTask);
+        FormTask.appendChild(CheckTask);
+        FormTask.appendChild(LabelTask);
+        FormTask.appendChild(DeleteTask);
+    }
 
-    const highCheckTask = document.createElement('input');
-    highCheckTask.id = 'highCheckboxID';
-    highCheckTask.className = 'checkboxClass';
-    highCheckTask.type = 'checkbox';
-   
-    
-    const highLabelTask = document.createElement('div');
-    highLabelTask.id = 'highLabelTextID';
-    highLabelTask.className = 'labelText';
-    highLabelTask.textContent = tsknm;
-
-    const highDeleteTask = document.createElement('button');
-    highDeleteTask.id = 'deleteHighTask';
-    highDeleteTask.className = 'deleteButton';
-    highDeleteTask.textContent = '✖';
-
-    HIGH_ELEMENTS.HIGH_TASKS.insertAdjacentElement('beforeend', highFormTask);
-    highFormTask.appendChild(highCheckTask);
-    highFormTask.appendChild(highLabelTask);
-    highFormTask.appendChild(highDeleteTask);
+    this.addLowTask = function (tsknm) {
+        const FormTask = document.createElement('div');
+        const CheckTask = document.createElement('input');
+        const LabelTask = document.createElement('div');
+        const DeleteTask = document.createElement('button');
+        FormTask.id = 'lowTaskFormID';
+        FormTask.className = 'taskForm'
+        CheckTask.id = 'lowCheckboxID';
+        CheckTask.className = 'checkboxClass';
+        CheckTask.type = 'checkbox';
+        LabelTask.id = 'lowLabelTextID';
+        LabelTask.className = 'labelText';
+        LabelTask.textContent = tsknm;
+        DeleteTask.id = 'deleteLowTask';
+        DeleteTask.className = 'deleteButton';
+        DeleteTask.textContent = '✖';
+        LOW_ELEMENTS.LOW_TASKS.insertAdjacentElement('beforeend', FormTask);
+        FormTask.appendChild(CheckTask);
+        FormTask.appendChild(LabelTask);
+        FormTask.appendChild(DeleteTask);
+    }
 }
-
-
-export function addLowTask(tsknm) {
-    const lowFormTask = document.createElement('div');
-    lowFormTask.id = 'lowTaskFormID';
-    lowFormTask.className = 'taskForm';
-
-    const lowCheckTask = document.createElement('input');
-    lowCheckTask.id = 'lowCheckboxID';
-    lowCheckTask.className = 'checkboxClass';
-    lowCheckTask.type = 'checkbox';
-
-
-    const lowLabelTask = document.createElement('div');
-    lowLabelTask.id = 'lowLabelTextID';
-    lowLabelTask.className = 'labelText';
-    lowLabelTask.textContent = tsknm;
-
-    const lowDeleteTask = document.createElement('button');
-    lowDeleteTask.id = 'deleteLowTask';
-    lowDeleteTask.className = 'deleteButton';
-    lowDeleteTask.textContent = '✖';
-
-    LOW_ELEMENTS.LOW_TASKS.insertAdjacentElement('beforeend', lowFormTask);
-    lowFormTask.appendChild(lowCheckTask);
-    lowFormTask.appendChild(lowLabelTask);
-    lowFormTask.appendChild(lowDeleteTask);
-}
-
-
-
